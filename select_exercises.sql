@@ -1,3 +1,13 @@
 USE codeup_test_db;
-    INSERT INTO albums(artist, record_name,realease_date,sales,genre)
-    VALUES ('pink')
+    SELECT record_name FROM albums WHERE artist= 'Pink Floyd';
+    SELECT 'The name of all albums by Pink Floyd.' AS 'info';
+    SELECT release_date FROM albums WHERE record_name='Sgt. Pepper''s Lonely Hearts Club Band';
+    SELECT 'The year Sgt. Pepper''s Lonely Hearts Club Band was released' AS 'info';
+    SELECT genre FROM albums WHERE record_name='Saturday Night Fever';
+    SELECT 'The genre for Nevermind, except I don''t have it in my list so its Saturday Night Fever' AS 'info';
+    SELECT record_name FROM albums WHERE release_date=1990;
+    SELECT 'Which albums were released in the 1990s' AS 'info';
+    SELECT record_name FROM albums WHERE sales<20000000;
+    SELECT 'Which albums had less than 20 million certified sales' AS 'info';
+    SELECT record_name FROM albums WHERE genre='Rock';
+    SELECT 'All the albums with a genre of "Rock". Why do these query results not include albums with a genre of "Hard rock" or "Progressive rock"?' AS 'info';
