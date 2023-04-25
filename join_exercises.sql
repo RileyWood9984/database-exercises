@@ -57,4 +57,4 @@ JOIN dept_manager AS dm
 ON de.dept_no = dm.dept_no
 WHERE de.to_date='9999-01-01'
 AND dm.to_date='9999-01-01'
-order by d.dept_no desc
+order by d.dept_no desc;
