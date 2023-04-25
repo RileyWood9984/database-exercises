@@ -1,5 +1,4 @@
 USE codeup_test_db;
-DROP TABLE albums;
 CREATE TABLE albums (
                         id INT UNSIGNED NOT NULL AUTO_INCREMENT,
                         artist VARCHAR(50),
@@ -7,6 +6,7 @@ CREATE TABLE albums (
                         release_date INT UNSIGNED NOT NULL,
                         sales FLOAT UNSIGNED NOT NULL,
                         genre VARCHAR(50) NOT NULL,
-                        PRIMARY KEY (id),
-                        UNIQUE (record_name,artist)
+                        PRIMARY KEY (id)
 );
+ALTER TABLE albums
+ADD UNIQUE (record_name,artist);
